@@ -20,7 +20,7 @@ public class SwaggerConfig {
     public Docket apiDocket(){
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.progressivecoder.es"))
+                .apis(RequestHandlerSelectors.basePackage("com.macnis.eventsourcingexample"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(getApiInfo());

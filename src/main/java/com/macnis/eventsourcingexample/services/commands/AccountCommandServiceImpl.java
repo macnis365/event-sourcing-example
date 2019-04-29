@@ -7,10 +7,12 @@ import com.macnis.eventsourcingexample.dto.commands.AccountCreateDto;
 import com.macnis.eventsourcingexample.dto.commands.MoneyCreditDto;
 import com.macnis.eventsourcingexample.dto.commands.MoneyDebitDto;
 import org.axonframework.commandhandling.gateway.CommandGateway;
+import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 
+@Service
 public class AccountCommandServiceImpl implements AccountCommandService {
     private final CommandGateway commandGateway;
 

@@ -5,6 +5,7 @@ import com.macnis.eventsourcingexample.dto.commands.MoneyCreditDto;
 import com.macnis.eventsourcingexample.dto.commands.MoneyDebitDto;
 import com.macnis.eventsourcingexample.services.commands.AccountCommandService;
 import io.swagger.annotations.Api;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.concurrent.CompletableFuture;
@@ -14,6 +15,7 @@ import java.util.concurrent.CompletableFuture;
 @Api(value = "Account Commands", description = "Account Commands Related Endpoints", tags = "Account Commands")
 public class AccountCommandController {
 
+    @Autowired
     private final AccountCommandService accountCommandService;
 
     public AccountCommandController(AccountCommandService accountCommandService) {
